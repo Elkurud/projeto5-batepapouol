@@ -82,17 +82,19 @@ function erro(){
     alert('erro');
 }
 function enviarMensagem(){
-    msg.from = nome.name;
-    msg.to = "Todos"
-    msg.text = document.querySelector('input').value;
-    msg.type = "message"
+    let msgvalue = document.querySelector('input').value;
+    msg.from = nome;
+    msg.to = "Todos";
+    msg.text = msgvalue;
+    msg.type = "message";
     if(msg.text != ""){
         let postarMsg = axios.post('https://mock-api.driven.com.br/api/v6/uol/messages', msg);
         postarMsg.catch(refresh);
-        console.log(postarMsg);
+        console.log(postarMsg)
         postarMsg.then(chat);
     }
-    document.querySelector('input').value = ""
+    document.getElementsByClassName('input').value = ""
+    console.log(msg);
 }
 function refresh(){
     window.location.reload();
