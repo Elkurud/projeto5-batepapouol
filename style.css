@@ -54,3 +54,37 @@ body {
     font-size: 18px;
     line-height: 21.09px;
 }
+
+.tempo {
+    color: #aaaaaa;
+    font-weight: 400;
+}
+
+.negrito {
+    font-weight: 700;
+    color: #000000;
+}
+
+li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+ul {
+    margin: 80px 0px;
+}
+
+.mensagen {
+    background-color: #ffffff;
+}
+
+.status {
+    background-color: #dcdcdc;
+}
+
+.private {
+    background-color: #ffdede;
+}
