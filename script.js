@@ -44,7 +44,7 @@ function renderMsgs(resposta) {
         console.log(resposta)
         if(resposta[i].type === 'message'){
             lista.innerHTML +=`
-            <li class="mensagem">
+            <li class="mensagem" data-test="message">
             <h1>
             <span class='tempo'>(${resposta[i].time}) </span> <span class='negrito'>${resposta[i].from}</span> para <span class="negrito">${resposta[i].to}</span>: ${resposta[i].text}
             </h1>
@@ -52,7 +52,7 @@ function renderMsgs(resposta) {
             `
         }else if(resposta[i].type == "status"){
             lista.innerHTML +=`
-            <li class="status">
+            <li class="status" data-test="message">
             <h1>
             <span class="tempo">(${resposta[i].time}) </span>  <span class="negrito">${resposta[i].from}</span> ${resposta[i].text}
             </h1>
@@ -61,7 +61,7 @@ function renderMsgs(resposta) {
         }
         else if(resposta[i].type == "private_message" && (resposta[i].to == nome.name || resposta[i].from == nome.name )){
             lista.innerHTML +=`
-            <li class="private"> 
+            <li class="private" data-test="message"> 
             <h1>
             <span class="tempo">(${resposta[i].time}) </span>  <span class="negrito">${resposta[i].from}</span> reservadamente para <span class="negrito">${resposta[i].to}</span>: ${resposta[i].text}
             </h1>
